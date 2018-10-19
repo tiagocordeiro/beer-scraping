@@ -10,7 +10,7 @@ colunas = soup.find_all("div", {"class": "span-1"})
 file = csv.writer(open("beers.csv", "w"))
 # Write column headers as the first line
 file.writerow(["Style", "Name", "Info",
-               "Exemplos", "ABV", "IBU", "SRM", "Gravidade Inicianl",
+               "Exemplos", "ABV", "IBU", "SRM", "Gravidade Inicial",
                "Gravidade Final"])
 
 for coluna in colunas:
