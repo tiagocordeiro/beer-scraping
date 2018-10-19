@@ -8,11 +8,10 @@ soup = BeautifulSoup(page.content, 'html.parser')
 colunas = soup.find_all("div", {"class": "span-1"})
 
 file = csv.writer(open("beers.csv", "w"))
+# Write column headers as the first line
 file.writerow(["Style", "Name", "Info",
                "Exemplos", "ABV", "IBU", "SRM", "Gravidade Inicianl",
-               "Gravidade Final"])  # Write column headers as the first line
-
-# print(colunas)
+               "Gravidade Final"])
 
 for coluna in colunas:
     type_title = coluna.find("h3", {"class": "type-title"})
